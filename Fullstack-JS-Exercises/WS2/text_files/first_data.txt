@@ -1,0 +1,6 @@
+Greetings!
+This is new textfile created using create_file.js
+You can add some content here using add_content.js
+Remember to delete me after using delete_file.js
+Just for testing purposes!
+Hello, world!
