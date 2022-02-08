@@ -1,0 +1,11 @@
+Greetings!
+This is new textfile created using create_file.js
+You can add some content here using add_content.js
+Remember to delete me after using delete_file.js
+Just for testing purposes!
+Hello, world!
+Hello, my nickname is @jevgenix
+I am second-year-student of the Laurea University of applied Sciences
+I am studying Business IT, and currently my focus is on fullstack-development/mobile-app development and data-processing with Python
+I am very motivated, and actually already seeking for Trainee :)
+Let me know if we are match! :D

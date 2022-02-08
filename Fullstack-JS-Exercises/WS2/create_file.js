@@ -8,7 +8,7 @@ var first_data =
   "You can add some content here using add_content.js\n" +
   "Remember to delete me after using delete_file.js\n";
 
-var second_data = "Just for testing purposes!\nHello, world!";
+var second_data = "Just for testing purposes!\nHello, world!\n";
 
 // Let's create our first_data file
 fs.writeFileSync("text_files/first_data.txt", first_data);
@@ -31,4 +31,34 @@ for (let i = 0; i < txt_files.length; i++) {
   let results = fs.readFileSync(txt_files[i]);
   console.log(results.toString());
 }
-// with same technic we can merge wthis files into one
+
+// With same technic we can merge wthis files into one
+// Create a list of files we want to merge into one file
+const merged_files = ["text_files/first_data.txt", "text_files/example.txt"];
+// Create a new txt document, we don't need to add any content for now yet
+fs.writeFileSync("text_files/merged_sync.txt", "");
+// Now lets add content
+for (let i = 0; i < merged_files.length; i++) {
+  fs.appendFileSync(
+    "text_files/merged_sync.txt",
+    fs.readFileSync(merged_files[i])
+  );
+}
+
+// lets try merging files also, but now in the asynchronous way
+// create async merged txt file
+fs.writeFile("text_files/merged_async.txt", "", (err) => {
+  if (err) throw err;
+  console.log("File: merged_async.txt is created.");
+});
+
+for (let i = 0; i < txt_files.length; i++) {
+  fs.appendFile(
+    "text_files/merged_async.txt",
+    fs.readFileSync(txt_files[i]),
+    (err) => {
+      if (err) throw err;
+      console.log(i + 1 + ": Data-file is added to file");
+    }
+  );
+}
