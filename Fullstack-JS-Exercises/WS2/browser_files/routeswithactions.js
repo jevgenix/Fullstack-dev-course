@@ -25,7 +25,7 @@ http
       var text_file = fs.readFileSync(
         // dont get it how access to file from main folder
         // for some reason this not working
-        //    "/Fullstack-JS-Exercises/WS2/text_files/example.txt"
+        //"/Fullstack-JS-Exercises/WS2/text_files/example.txt"
         "./example.txt"
       );
       res.write(text_file);
