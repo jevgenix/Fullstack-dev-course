@@ -14,11 +14,11 @@ var data = ["name", "age", "company", "address"];
 json.forEach((item) => {
   data.forEach((prop) => {
     if (prop == "name") {
-      html += "<tr>" + "<td>" + item[prop] + "</td>";
+      html += "<tr><td>" + item[prop] + "</td>";
     } else if (prop != "name" && prop != "address") {
       html += "<td>" + item[prop] + "</td>";
     } else {
-      html += "<td>" + item[prop] + "</td>" + "</tr>";
+      html += "<td>" + item[prop] + "</td></tr>";
     }
     // if you want to console.log all data
     //console.log(item[prop]);

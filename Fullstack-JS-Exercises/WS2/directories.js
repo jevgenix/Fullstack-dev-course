@@ -1,5 +1,5 @@
 /*
- * This code creates folder and if folder exists already it deletes it first
+ * Program creates folder and if folder exists already, file will be deleted
  */
 
 const fs = require("fs");
@@ -7,8 +7,8 @@ const fs = require("fs");
 fs.mkdir("newdata", true, (err) => {
   if (err) {
     console.log(
-      "This folder already exists, so let's delete it first" +
-        "\n You can create file again by running same program"
+      "\nThis folder already exists, so it will be deleted" +
+        "\nYou can create file again by running same program"
     );
     // In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed.
     // Use fs.rm(path, { recursive: true }) instead
