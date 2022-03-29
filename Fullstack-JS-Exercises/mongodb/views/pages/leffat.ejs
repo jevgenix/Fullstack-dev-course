@@ -1,0 +1,17 @@
+<!-- Tiedoston nimi on leffat.ejs -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Leffat</h1>
+    <table border="1">
+      <!-- luodaan silmukka joka käy läpi taulu-muuttujan sisällön -->
+      <% for (var i=0; i < taulu.length; i++){ %>
+      <tr>
+        <td><%= taulu[i].title %></td>
+        <td><%= taulu[i].year %></td>
+        <td><img src='<%= taulu[i].poster %>'' height=' 30%'></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
