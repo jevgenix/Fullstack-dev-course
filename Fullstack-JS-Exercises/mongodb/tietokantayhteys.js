@@ -16,7 +16,6 @@ const uri =
   "@cluster0.byt4i.mongodb.net/sample?retryWrites=true&w=majority";
 
 /* Luodaan uusi yhteysolio käyttäen edellä määriteltyä URI:a sekä tarvittavia parametreja */
-
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
