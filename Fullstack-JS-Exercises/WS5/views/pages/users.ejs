@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body class="container">
+    <header><%- include('../partials/header.ejs') %></header>
+
+    <main>
+      <div class="jumbotron">
+        <table>
+          <% users.forEach(function(user){ %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.age %></td>
+          </tr>
+          <% }) %>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
