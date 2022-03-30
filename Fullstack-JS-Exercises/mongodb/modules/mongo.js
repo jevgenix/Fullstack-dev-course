@@ -5,16 +5,15 @@ exports.getData = function getResult(callback) {
   // Tuodaan moduuli ohjelmaan
   const MongoClient = require("mongodb").MongoClient;
 
-  var user = process.env.DB_USER;
-  var pwd = process.env.DB_PASS;
+  const user = process.env.DB_USER;
+  const pwd = process.env.DB_PASS;
 
-  // Määritellään salasana ja yhteysosoite tietokantaan (tämän saa MongoDB Atlas-palvelusta)
   const uri =
     "mongodb+srv://" +
     user +
     ":" +
     pwd +
-    "@cluster0.byt4i.mongodb.net/sample?retryWrites=true&w=majority";
+    "@cluster0.byt4i.mongodb.net/sample_mflix?retryWrites=true&w=majority";
 
   /* Luodaan uusi yhteysolio käyttäen edellä määriteltyä URI:a sekä tarvittavia parametreja */
 
@@ -25,7 +24,7 @@ exports.getData = function getResult(callback) {
 
   /* Määritellään tietokantaan tehtävä kyselu JSON-oliona. Tämä kysely hakee kaikkia elokuvia
     joiden nimessä esiintyy sana "Star Wars" */
-  var query = {
+  let query = {
     title: new RegExp("Star Wars"),
   };
 
