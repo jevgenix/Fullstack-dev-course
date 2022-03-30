@@ -57,3 +57,18 @@ client.connect((err) => {
     console.log("Kuunnellaan porttia....3001");
   });
 });
+
+/* 
+function parse(data) {
+    var html = "<table border='1'>";
+    for (var i = 0; i < data.length; i++) {
+        html += `<tr>
+                   <td>${data[i].title}</td>
+                   <td>${data[i].year}</td>
+                   <td><img src='${data[i].poster}' height='30%'></td>
+               </tr>`;
+    }
+    html += "</table>";
+    return html;
+}
+ */
