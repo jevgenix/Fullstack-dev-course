@@ -8,7 +8,7 @@ const uri = process.env.DB_URI;
 const port = 8081;
 
 // yhdistetään tietokantaan
-mongoose.conndect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const MovieSchema = new mongoose.Schema({
   title: String,
